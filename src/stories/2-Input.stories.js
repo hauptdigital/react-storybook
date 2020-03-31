@@ -1,5 +1,5 @@
 import React from "react";
-import UserPassword from "../components/userPassword";
+import UserPassword from "../components/UserPassword";
 
 export default { title: "UserPassword" };
 

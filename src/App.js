@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import UserPassword from "./components/userPassword";
+import UserPassword from "./components/UserPassword";
 
 function App() {
   return <UserPassword />;
