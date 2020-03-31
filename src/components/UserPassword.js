@@ -31,7 +31,7 @@ function UserPassword({ defaultValue }) {
     if (defaultValue) {
       setInputBackgroundColor(defaultValue);
     }
-  }, []);
+  }, [defaultValue]);
 
   return (
     <PasswordInput
