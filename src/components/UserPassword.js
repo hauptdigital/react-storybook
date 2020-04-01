@@ -15,8 +15,9 @@ const PasswordInput = styled.input`
   font-size: 2em;
 `;
 
-function UserPassword({ defaultValue }) {
+function UserPassword({ value }) {
   const [hslaValues, setHslaValues] = React.useState({ hue: 0, lightness: 0 });
+  const [inputValue, setInputValue] = React.useState(value ? value : "");
 
   function setInputBackgroundColor(inputValue) {
     const numberOfCharacters = inputValue.length;
@@ -24,14 +25,9 @@ function UserPassword({ defaultValue }) {
       hue: numberOfCharacters >= 12 ? 120 : numberOfCharacters * 10,
       lightness: numberOfCharacters === 0 ? 0 : 1
     };
+    setInputValue(inputValue);
     setHslaValues(updatedHslaValues);
   }
-
-  React.useEffect(() => {
-    if (defaultValue) {
-      setInputBackgroundColor(defaultValue);
-    }
-  }, [defaultValue]);
 
   return (
     <PasswordInput
@@ -40,7 +36,7 @@ function UserPassword({ defaultValue }) {
         setInputBackgroundColor(event.target.value);
       }}
       hslaValues={hslaValues}
-      defaultValue={defaultValue}
+      value={inputValue}
     />
   );
 }
