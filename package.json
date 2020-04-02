@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build-react-scripts": "react-scripts build",
-    "build": "npm run build-react-scripts && npm rund build-storybook",
+    "build": "npm run build-react-scripts && npm run build-storybook",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
