@@ -13,7 +13,7 @@ const Button = styled.button`
   }
 `;
 
-const buttonSizes = {
+const buttonStyles = {
   XS: { padding: "5px", fontSize: "1em" },
   S: { padding: "5px", fontSize: "1.5em" },
   M: { padding: "5px 25px", fontSize: "2em" },
@@ -23,15 +23,11 @@ const buttonSizes = {
 };
 
 function getButtonPadding(size) {
-  return buttonSizes["" + size + ""].padding;
+  return buttonStyles[size].padding;
 }
 
 function getButtonFontSize(size) {
-  return buttonSizes["" + size + ""].fontSize;
+  return buttonStyles[size].fontSize;
 }
-
-Button.defaultProps = {
-  type: "button"
-};
 
 export default Button;
